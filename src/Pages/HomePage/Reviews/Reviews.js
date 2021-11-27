@@ -4,7 +4,7 @@ import { useState } from 'react';
 const Reviews = () => {
     const [reviews, setReview] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/add_review')
+        fetch('https://fast-inlet-88656.herokuapp.com/add_review')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])

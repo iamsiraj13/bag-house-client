@@ -46,7 +46,7 @@ const useFirebase = () => {
 
    const saveUser=(email,displayName,method)=>{
       const user = {email,displayName}
-      fetch('http://localhost:5000/user',{
+      fetch('https://fast-inlet-88656.herokuapp.com/user',{
           method:method,
           headers:{
               'content-type':'application/json'
@@ -56,7 +56,7 @@ const useFirebase = () => {
    }
 
    useEffect(()=>{
-    fetch(`http://localhost:5000/user/${user.email}`)
+    fetch(`https://fast-inlet-88656.herokuapp.com/user/${user.email}`)
     .then(res=>res.json())
     .then(data=>{
         setAdmin(data.admin)

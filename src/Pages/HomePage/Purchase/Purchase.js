@@ -13,7 +13,7 @@ const Purchase = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
 
-    fetch('http://localhost:5000/placeOrder',{
+    fetch('https://fast-inlet-88656.herokuapp.com/placeOrder',{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -29,7 +29,7 @@ const Purchase = () => {
 }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${purchaseId}`)
+        fetch(`https://fast-inlet-88656.herokuapp.com/singleProduct/${purchaseId}`)
             .then(res => res.json())
             .then(data => setSinglesingleProduct(data))
     }, [purchaseId])

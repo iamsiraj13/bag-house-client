@@ -7,7 +7,7 @@ import Nav from '../../Shared/Nav/Nav';
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/add_product')
+        fetch('https://fast-inlet-88656.herokuapp.com/add_product')
             .then(res => res.json())
             .then(data =>{ 
                 setProducts(data)

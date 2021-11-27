@@ -7,7 +7,7 @@ const MyOrder = () => {
 
 
     const deleteOrder =(id)=>{
-        const url = `http://localhost:5000/deleteOrder/${id}`;
+        const url = `https://fast-inlet-88656.herokuapp.com/deleteOrder/${id}`;
         fetch(url,{
             method:'DELETE'
 
@@ -19,7 +19,7 @@ const MyOrder = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/placeOrder?email=${user.email}`;
+        const url = `https://fast-inlet-88656.herokuapp.com/placeOrder?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyorder(data))

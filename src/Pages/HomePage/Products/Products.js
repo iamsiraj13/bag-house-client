@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/add_product')
+        fetch('https://fast-inlet-88656.herokuapp.com/add_product')
             .then(res => res.json())
             .then(data =>{
                 const  newData = data.slice(0,8);
